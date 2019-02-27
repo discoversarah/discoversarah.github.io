@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='"https://fonts.googleapis.com/css?family=Bowlby+One+SC|Cabin+Condensed|Luckiest+Guy|Press+Start+2P"' rel='stylesheet' type='text/css'>
+<style>
+ }
+ul {
+  padding: 10px;
+  background: rgba(0,1,200,0.5);
+  text-align: center;
+}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+  font-family: 'Pacifico', cursive;
+}
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<ul>
+      <li><button onclick=TrainingEquipment()>Training equipment</button></li>
+      <li><button onclick=SportsWear()>Sports Wear</button></li>
+      <li><button onclick=SportsEquipment()>Sports equipment</button></li>
+
+</ul>
+
+<h1>Discover Sport</h1>
+<h2>The Original Sports Brand Made For You!</h2>
+
+<div id="sport">  
+</div>
+
+
+<script>
+  TrainingEquipmentImages = [
+                        'url("https://res.cloudinary.com/iconfitness/image/upload/v1/site--14/product/29316/HRTL80511.jpg")',
+                        'url("https://cdn.shopify.com/s/files/1/0029/7828/3564/products/gts_print_right_dipsadded_shopify.png?v=1540913477")',
+                        'url("https://i5.walmartimages.com/asr/d1464fde-6913-48c8-8614-f418b190f465_1.4d9ea01d750809f66226c5cbab1d8bf4.jpeg")',               ]
+                        
+  SportsWearImages = [
+                        'url("https://5.imimg.com/data5/TB/CJ/MY-24014740/kids-sports-wear-500x500.jpg")',
+                        'url("https://maddenandmadden.com/wp-content/uploads/2018/04/2018-Hot-Women-Athletic-Gym-Yoga-Clothes-Running-Fitness-Clothing-Stripe-Sleeveless-Sport-Vest-Pants-Sets.jpg")',
+                        'url("https://newwave.de/4583-home_default/flex-tights-german-eight-rowing-clothes.jpg")',               ]
+                        
+  SportsEquipmentImages = [
+                        'url("https://di5cp8ixdolg4.cloudfront.net/images/products/30854b.jpg")',
+                        'url("https://images-na.ssl-images-amazon.com/images/I/614FDuUn5aL._SX425_.jpg")',
+                        'url("https://superiorplay.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/v/pv672-close_2.jpg")',               ]
+                        
+  TrainingEquipmentDivs = [ 
+                    '<div class="item"><p>Treadmill<span class="price">$1990</span><br /><small>Hardcore cardio made for walking, jogging and running. Heavy Duty made to last for years. (Updated Model 4.0) </small></p></div>',
+                    '<div class="item"><p>Total Gym<span class="price">$1300</span><br /><small>Includes spare pieces. Made to help exercise the abdomen. Can be used in several ways. Read instruction manual for more.</small></p></div>',
+                    '<div class="item"><p>Weights<span class="price">$300</span><br /><small>Comes in a set of 5 pounds to 10 pounds. Helps exercise the biceps. Read useer manual for examples of exercises. etc.</small></p></div>',
+                      ]
+  SportsWearDivs = [ 
+                    '<div class="item"><p>Mens Full Sport Outfit<span class="price">$18</span><br /><small>Mens shirt and pants sports wear. Good quality in all sizes. (Updated Model 4.0) </small></p></div>',
+                    '<div class="item"><p>Womans Full Sport Outfit<span class="price">$20</span><br /><small>Womans shirt and pants sports wear. Good quality in all sizes.</small></p></div>',
+                    '<div class="item"><p>Womans Sports pants<span class="price">$6</span><br /><small>Womans pants sports wear. Good quality in all sizes.</small></p></div>',
+                      ]
+  SportsEquipmentDivs = [ 
+                    '<div class="item"><p>Original Sports equipment<span class="price">$35</span><br /><small>Sports original equipment. Basketballs, Bats, Soccer balls, Hand bals, etc.</small></p></div>',
+                    '<div class="item"><p>Training Cones<span class="price">$47</span><br /><small>Used for practice. Heavy duty quality.</small></p></div>',
+                    '<div class="item"><p>Basketball Hoop<span class="price">$1099</span><br /><small>Basketball hoop used for outdoors.</small></p></div>',
+                      ]
+  
+                        
+function TrainingEquipment() {
+  	  train= document.getElementById("sport")
+  	  train.innerHTML = ''
+	    train.innerHTML += TrainingEquipmentDivs[0]
+    	train.innerHTML += TrainingEquipmentDivs[1]
+    	train.innerHTML += TrainingEquipmentDivs[2]
+
+
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = TrainingEquipmentImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+  } 
+} 
+
+function SportsEquipment() {
+      trains= document.getElementById("sport")
+  	  trains.innerHTML = ''
+	    trains.innerHTML += SportsEquipmentDivs[0]
+    	trains.innerHTML += SportsEquipmentDivs[1]
+    	trains.innerHTML += SportsEquipmentDivs[2]
+
+	items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = SportsEquipmentImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+  }
+} 
+
+function SportsWear() {
+      wear= document.getElementById("sport")
+  	  wear.innerHTML = ''
+	    wear.innerHTML += SportsWearDivs[0]
+    	wear.innerHTML += SportsWearDivs[1]
+    	wear.innerHTML += SportsWearDivs[2]
+
+	items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = SportsWearImages[i]
+  	items[i].style.backgroundSize = '100% 100%'
+  }
+} 
+
+ 
+
+
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
