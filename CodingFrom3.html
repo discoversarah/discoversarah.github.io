@@ -131,16 +131,19 @@ small {
                         'url("https://superiorplay.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/v/pv672-close_2.jpg")',               ]
                         
   TrainingEquipmentDivs = [ 
+	  	onclick=this.classList.toggle("show-description")
                     '<div class="item"><p>Treadmill<span class="price">$1990</span><br /><small>Hardcore cardio made for walking, jogging and running. Heavy Duty made to last for years. (Updated Model 4.0) </small></p></div>',
                     '<div class="item"><p>Total Gym<span class="price">$1300</span><br /><small>Includes spare pieces. Made to help exercise the abdomen. Can be used in several ways. Read instruction manual for more.</small></p></div>',
                     '<div class="item"><p>Weights<span class="price">$300</span><br /><small>Comes in a set of 5 pounds to 10 pounds. Helps exercise the biceps. Read useer manual for examples of exercises. etc.</small></p></div>',
                       ]
   SportsWearDivs = [ 
+	 	 onclick=this.classList.toggle("show-description")
                     '<div class="item"><p>Mens Full Sport Outfit<span class="price">$18</span><br /><small>Mens shirt and pants sports wear. Good quality in all sizes. (Updated Model 4.0) </small></p></div>',
                     '<div class="item"><p>Womans Full Sport Outfit<span class="price">$20</span><br /><small>Womans shirt and pants sports wear. Good quality in all sizes.</small></p></div>',
                     '<div class="item"><p>Womans Sports pants<span class="price">$6</span><br /><small>Womans pants sports wear. Good quality in all sizes.</small></p></div>',
                       ]
   SportsEquipmentDivs = [ 
+	 	 onclick=this.classList.toggle("show-description")
                     '<div class="item"><p>Original Sports equipment<span class="price">$35</span><br /><small>Sports original equipment. Basketballs, Bats, Soccer balls, Hand bals, etc.</small></p></div>',
                     '<div class="item"><p>Training Cones<span class="price">$47</span><br /><small>Used for practice. Heavy duty quality.</small></p></div>',
                     '<div class="item"><p>Basketball Hoop<span class="price">$1099</span><br /><small>Basketball hoop used for outdoors.</small></p></div>',
@@ -153,9 +156,7 @@ function TrainingEquipment() {
 	    	train.innerHTML += TrainingEquipmentDivs[0]
     		train.innerHTML += TrainingEquipmentDivs[1]
     		train.innerHTML += TrainingEquipmentDivs[2]
-
-		onclick=this.classList.toggle("show-description")
-  		items = document.getElementsByClassName("item")
+		items = document.getElementsByClassName("item")
   		for (i=0; i<3; i=i+1) {
 		items[i].style.background = TrainingEquipmentImages[i]
 		items[i].style.backgroundSize = '100% 100%'
@@ -168,7 +169,7 @@ function SportsEquipment() {
 	   	trains.innerHTML += SportsEquipmentDivs[0]
     		trains.innerHTML += SportsEquipmentDivs[1]
     		trains.innerHTML += SportsEquipmentDivs[2]
-		onclick=this.classList.toggle("show-description")
+	 
 		items = document.getElementsByClassName("item")
   		for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsEquipmentImages[i]
@@ -177,12 +178,12 @@ function SportsEquipment() {
 } 
 
 function SportsWear() {
-     	wear= document.getElementById("sport")
+     	wear= document.getElementById("sport")  
   	wear.innerHTML = ''
 	wear.innerHTML += SportsWearDivs[0]
     	wear.innerHTML += SportsWearDivs[1]
     	wear.innerHTML += SportsWearDivs[2]
-	onclick=this.classList.toggle("show-description")
+	 
 	items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsWearImages[i]
