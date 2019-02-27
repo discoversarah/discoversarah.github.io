@@ -151,46 +151,47 @@ small {
   
                         
 function TrainingEquipment() {
-  	  	train= document.getElementById("sport")
-  	  	train.innerHTML = ''
-	    	train.innerHTML += TrainingEquipmentDivs[0]
-    		train.innerHTML += TrainingEquipmentDivs[1]
-    		train.innerHTML += TrainingEquipmentDivs[2]
-		items = document.getElementsByClassName("item")
-  		for (i=0; i<3; i=i+1) {
+  	  train= document.getElementById("sport")
+  	  train.innerHTML = ''
+	    train.innerHTML += TrainingEquipmentDivs[0]
+    	train.innerHTML += TrainingEquipmentDivs[1]
+    	train.innerHTML += TrainingEquipmentDivs[2]
+
+
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
 		items[i].style.background = TrainingEquipmentImages[i]
 		items[i].style.backgroundSize = '100% 100%'
   } 
 } 
 
 function SportsEquipment() {
-      		trains= document.getElementById("sport")
-  	  	trains.innerHTML = ''
-	   	trains.innerHTML += SportsEquipmentDivs[0]
-    		trains.innerHTML += SportsEquipmentDivs[1]
-    		trains.innerHTML += SportsEquipmentDivs[2]
-	 
-		items = document.getElementsByClassName("item")
-  		for (i=0; i<3; i=i+1) {
+      trains= document.getElementById("sport")
+  	  trains.innerHTML = ''
+	    trains.innerHTML += SportsEquipmentDivs[0]
+    	trains.innerHTML += SportsEquipmentDivs[1]
+    	trains.innerHTML += SportsEquipmentDivs[2]
+
+	items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsEquipmentImages[i]
 		items[i].style.backgroundSize = '100% 100%'
   }
 } 
 
 function SportsWear() {
-     	wear= document.getElementById("sport")  
-  	wear.innerHTML = ''
-	wear.innerHTML += SportsWearDivs[0]
+      wear= document.getElementById("sport")
+  	  wear.innerHTML = ''
+	    wear.innerHTML += SportsWearDivs[0]
     	wear.innerHTML += SportsWearDivs[1]
     	wear.innerHTML += SportsWearDivs[2]
-	 
+
 	items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsWearImages[i]
   	items[i].style.backgroundSize = '100% 100%'
   }
 } 
-
  
 
 
