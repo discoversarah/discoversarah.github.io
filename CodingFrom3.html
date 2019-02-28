@@ -105,6 +105,7 @@ small {
       <li><button onclick=TrainingEquipment()>Training equipment</button></li>
       <li><button onclick=SportsWear()>Sports Wear</button></li>
       <li><button onclick=SportsEquipment()>Sports equipment</button></li>
+      <li><button onclick=SportsShoes()>Sports Shoes</button></li>
 
 </ul>
 
@@ -125,7 +126,11 @@ small {
                         'url("https://5.imimg.com/data5/TB/CJ/MY-24014740/kids-sports-wear-500x500.jpg")',
                         'url("https://maddenandmadden.com/wp-content/uploads/2018/04/2018-Hot-Women-Athletic-Gym-Yoga-Clothes-Running-Fitness-Clothing-Stripe-Sleeveless-Sport-Vest-Pants-Sets.jpg")',
                         'url("https://newwave.de/4583-home_default/flex-tights-german-eight-rowing-clothes.jpg")',               ]
-                        
+  SportsShoesImages = [
+                        'url("https://dks.scene7.com/is/image/dkscdn/17NIKMZMCG3GRYGRNTNN_Aurora_Green_is/?$DSG_ProductCard$")',
+                        'url("https://www.google.com/search?q=basketball+shoes&safe=strict&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjXzvDYit_gAhWLjlkKHSB1D5sQ_AUIDygC&biw=1854&bih=960#imgrc=r-LU_Vc1BoMrqM:")',
+                        'url("https://images-na.ssl-images-amazon.com/images/I/81r9RtsOcFL._UX395_.jpg")',  
+	  		'url("https://cdn3.volusion.com/goz35.avhz4/v/vspfiles/photos/SM-NI831961-601-2.jpg?1490599949")',  
   SportsEquipmentImages = [
                         'url("https://di5cp8ixdolg4.cloudfront.net/images/products/30854b.jpg")',
                         'url("https://images-na.ssl-images-amazon.com/images/I/614FDuUn5aL._SX425_.jpg")',
@@ -146,6 +151,12 @@ small {
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Original Sports equipment<span class="price">$35</span><br /><small>Sports original equipment. Basketballs, Bats, Soccer balls, Hand bals, etc.</small></p></div>',
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Training Cones<span class="price">$47</span><br /><small>Used for practice. Heavy duty quality.</small></p></div>',
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Basketball Hoop<span class="price">$1099</span><br /><small>Basketball hoop used for outdoors.</small></p></div>',
+                      ]
+   SportsShoesDivs = [ 
+                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes made for tenis</small></p></div>',
+                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes made for Basketball</small></p></div>',
+                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes Made For Track/Running</small></p></div>',
+	  	    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes Made For Soccer Specifically. </small></p></div>',
                       ]
   
                         
@@ -174,6 +185,19 @@ function SportsEquipment() {
 	items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsEquipmentImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+  }
+} 
+function SportsShoes() {
+      shoes= document.getElementById("sport")
+  	  shoes.innerHTML = ''
+	    shoes.innerHTML += SportsShoesDivs[0]
+    	shoes.innerHTML += SportsShoesDivs[1]
+    	shoes.innerHTML += SportsShoesDivs[2]
+
+	items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+		items[i].style.background = SportsShoesImages[i]
 		items[i].style.backgroundSize = '100% 100%'
   }
 } 
