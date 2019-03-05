@@ -1,25 +1,30 @@
-<!DOCTYPE html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script></script>
 <link href='"https://fonts.googleapis.com/css?family=Bowlby+One+SC|Cabin+Condensed|Luckiest+Guy|Press+Start+2P"' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 <style>
  
 ul {
   padding: 10px;
-  background: rgba(0,1,200,0.5);
+ 
   text-align: center;
 }
 li {
   display: inline;
-  padding: 0px 10px 0px 10px;
-  font-family: 'Pacifico', cursive;
+  padding: 1px 10px 0px 10px;
+  font-family: 'Bitter', serif;
+ 
+  
+  
+
 }
 body {
-  font-family: helvetica, sans-serif;
+  font-family: 'Bitter', serif;
   margin: 0 auto;
   max-width: 600px;
   background: #232323;
+  background:    url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/J9H9WF0/glowing-yellow-white-dot-particles-flickering-on-a-black-blue-gradient-background-imitating-a-night-sky-full-of-stars_s3zsh8aa_thumbnail-full01.png);
+  background-size: 100%;
 }
 div {
   height: 400px;
@@ -49,7 +54,7 @@ p {
   padding: 10px;
   line-height: 28px;
   text-align: justify;
-  position: absolute;
+  position: left;
   bottom: 0;
   margin: 0;
   height: 30px;
@@ -64,24 +69,29 @@ small {
 
 .show-description p {
   height: 150px;
+  color: SLATEBLUE;
 }
 
 .show-description small {
   opacity: 1;
+  color: BLUE;
 }
 
 .price {
   float: right;
+  color: DARKCYAN;
 }
 @media (max-width: 500px) {
   h1 {
-    font-size: 50px;
+    font-size: 10px;
     margin-top: 20px;
     line-height: 40px;
+ 
   }
   h2 {
     font-size: 20px;
     margin: 20px 0 30px 0;
+ 
   }
   div {
     margin: 20px 12px 0 12px;
@@ -89,6 +99,7 @@ small {
   p {
     font-size: 20px;
     line-height: 24px;
+ 
   }
   small {
     font-size: 16px;
@@ -105,8 +116,7 @@ small {
       <li><button onclick=TrainingEquipment()>Training equipment</button></li>
       <li><button onclick=SportsWear()>Sports Wear</button></li>
       <li><button onclick=SportsEquipment()>Sports equipment</button></li>
-      <li><button onclick=SportsShoes()>Sports Shoes</button></li>
-
+	   <li><button onclick=SportsShoes()>Sports Shoes</button></li>
 </ul>
 
 <h1>Discover Sport</h1>
@@ -121,24 +131,24 @@ small {
                         'url("https://res.cloudinary.com/iconfitness/image/upload/v1/site--14/product/29316/HRTL80511.jpg")',
                         'url("https://cdn.shopify.com/s/files/1/0029/7828/3564/products/gts_print_right_dipsadded_shopify.png?v=1540913477")',
                         'url("https://i5.walmartimages.com/asr/d1464fde-6913-48c8-8614-f418b190f465_1.4d9ea01d750809f66226c5cbab1d8bf4.jpeg")',               ]
-                       ] 
+                        
   SportsWearImages = [
                         'url("https://5.imimg.com/data5/TB/CJ/MY-24014740/kids-sports-wear-500x500.jpg")',
                         'url("https://maddenandmadden.com/wp-content/uploads/2018/04/2018-Hot-Women-Athletic-Gym-Yoga-Clothes-Running-Fitness-Clothing-Stripe-Sleeveless-Sport-Vest-Pants-Sets.jpg")',
-                        'url("https://newwave.de/4583-home_default/flex-tights-german-eight-rowing-clothes.jpg")',  
-  ]
-  SportsShoesImages = [
-                         
-                        'url("https://www.google.com/search?q=basketball+shoes&safe=strict&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjXzvDYit_gAhWLjlkKHSB1D5sQ_AUIDygC&biw=1854&bih=960#imgrc=r-LU_Vc1BoMrqM:")',
-                        'url("https://images-na.ssl-images-amazon.com/images/I/81r9RtsOcFL._UX395_.jpg")',  
-	  		'url("https://cdn3.volusion.com/goz35.avhz4/v/vspfiles/photos/SM-NI831961-601-2.jpg?1490599949")',  
-	  ]
+                        'url("https://newwave.de/4583-home_default/flex-tights-german-eight-rowing-clothes.jpg")',               ]
+                        
   SportsEquipmentImages = [
                         'url("https://di5cp8ixdolg4.cloudfront.net/images/products/30854b.jpg")',
                         'url("https://images-na.ssl-images-amazon.com/images/I/614FDuUn5aL._SX425_.jpg")',
-                        'url("https://superiorplay.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/v/pv672-close_2.jpg")',               
-  ]
-                       
+                        'url("https://superiorplay.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/p/v/pv672-close_2.jpg")',               ]
+  SportsShoesImages = [
+                         
+						                        'url("https://www.thegraphicedge.com/media/products/7_E7BC04B34E586.jpg")',
+						                        'url("https://images-na.ssl-images-amazon.com/images/I/81r9RtsOcFL._UX395_.jpg")',  
+							  		'url("https://cdn3.volusion.com/goz35.avhz4/v/vspfiles/photos/SM-NI831961-601-2.jpg?1490599949")', 
+							'url("https://pmcfootwearnews.files.wordpress.com/2018/03/nike-womens-tennis-shoes-11.jpg?w=700&h=437&crop=1")', 
+							  ]
+                        
   TrainingEquipmentDivs = [ 
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Treadmill<span class="price">$1990</span><br /><small>Hardcore cardio made for walking, jogging and running. Heavy Duty made to last for years. (Updated Model 4.0) </small></p></div>',
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Total Gym<span class="price">$1300</span><br /><small>Includes spare pieces. Made to help exercise the abdomen. Can be used in several ways. Read instruction manual for more.</small></p></div>',
@@ -155,13 +165,13 @@ small {
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Training Cones<span class="price">$47</span><br /><small>Used for practice. Heavy duty quality.</small></p></div>',
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Basketball Hoop<span class="price">$1099</span><br /><small>Basketball hoop used for outdoors.</small></p></div>',
                       ]
-   SportsShoesDivs = [ 
+  SportsShoesDivs = [ 
                     
-                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes made for Basketball</small></p></div>',
-                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes Made For Track/Running</small></p></div>',
-	  	    '<div class="item" onclick=this.classList.toggle("show-description")><p>Shoes Made For Soccer Specifically. </small></p></div>',
-                      ]
-  
+	  				'<div class="item" onclick=this.classList.toggle("show-description")><p>Basketball Shoes <span class="price">$123</span><br /><small>Shoes made for Basketball</small></p></div>',
+	  				'<div class="item" onclick=this.classList.toggle("show-description")><p>Track Shoes <span class="price">$86</span><br /><small>Shoes made for track</small></p></div>',
+	  				'<div class="item" onclick=this.classList.toggle("show-description")><p>Soccer Shoes <span class="price">$104</span><br /><small>Shoes made for soccer</small></p></div>',
+	 	 			'<div class="item" onclick=this.classList.toggle("show-description")><p>Tennis Shoes <span class="price">$65</span><br /><small>Shoes made for Tennis</small></p></div>',
+  ]
                         
 function TrainingEquipment() {
   	  train= document.getElementById("sport")
@@ -169,49 +179,30 @@ function TrainingEquipment() {
 	    train.innerHTML += TrainingEquipmentDivs[0]
     	train.innerHTML += TrainingEquipmentDivs[1]
     	train.innerHTML += TrainingEquipmentDivs[2]
-
-
   items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = TrainingEquipmentImages[i]
 		items[i].style.backgroundSize = '100% 100%'
   } 
 } 
-
 function SportsEquipment() {
       trains= document.getElementById("sport")
   	  trains.innerHTML = ''
 	    trains.innerHTML += SportsEquipmentDivs[0]
     	trains.innerHTML += SportsEquipmentDivs[1]
     	trains.innerHTML += SportsEquipmentDivs[2]
-
 	items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsEquipmentImages[i]
 		items[i].style.backgroundSize = '100% 100%'
   }
 } 
-function SportsShoes() {
-      shoes= document.getElementById("sport")
-  	  shoes.innerHTML = ''
-	    shoes.innerHTML += SportsShoesDivs[0]
-    	shoes.innerHTML += SportsShoesDivs[1]
-    	shoes.innerHTML += SportsShoesDivs[2]
-
-	items = document.getElementsByClassName("item")
-  for (i=0; i<3; i=i+1) {
-		items[i].style.background = SportsShoesImages[i]
-		items[i].style.backgroundSize = '100% 100%'
-  }
-} 
-
 function SportsWear() {
       wear= document.getElementById("sport")
   	  wear.innerHTML = ''
 	    wear.innerHTML += SportsWearDivs[0]
     	wear.innerHTML += SportsWearDivs[1]
     	wear.innerHTML += SportsWearDivs[2]
-
 	items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
 		items[i].style.background = SportsWearImages[i]
@@ -219,13 +210,23 @@ function SportsWear() {
   }
 } 
 
+function SportsShoes() {
+      shoes= document.getElementById("sport")
+  	  shoes.innerHTML = ''
+	    shoes.innerHTML += SportsShoesDivs[0]
+    	shoes.innerHTML += SportsShoesDivs[1]
+    	shoes.innerHTML += SportsShoesDivs[2]
+		shoes.innerHTML += SportsShoesDivs[3]
+	items = document.getElementsByClassName("item")
+  for (i=0; i<4; i=i+1) {
+		items[i].style.background = SportsShoesImages[i]
+		items[i].style.backgroundSize = '100% 100%'
+  }
+} 
+ 
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
 </script>
 
 </body>
-     
-    
- 
-
-     
-    
- 
