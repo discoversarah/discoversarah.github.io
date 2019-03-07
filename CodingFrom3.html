@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
 <script></script>
 <link href='"https://fonts.googleapis.com/css?family=Bowlby+One+SC|Cabin+Condensed|Luckiest+Guy|Press+Start+2P"' rel='stylesheet' type='text/css'>
@@ -135,7 +136,10 @@ small {
   SportsWearImages = [
                         'url("https://5.imimg.com/data5/TB/CJ/MY-24014740/kids-sports-wear-500x500.jpg")',
                         'url("https://maddenandmadden.com/wp-content/uploads/2018/04/2018-Hot-Women-Athletic-Gym-Yoga-Clothes-Running-Fitness-Clothing-Stripe-Sleeveless-Sport-Vest-Pants-Sets.jpg")',
-                        'url("https://newwave.de/4583-home_default/flex-tights-german-eight-rowing-clothes.jpg")',               ]
+                        'url("https://newwave.de/4583-home_default/flex-tights-german-eight-rowing-clothes.jpg")',               
+                        'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RONlWKi9y0JBuFxW4_Vm_E-cRuNYKahCg7RhknZxcJZJkqP8cA")',
+                        'url(https://sc01.alicdn.com/kf/HTB12EhgbJ.LL1JjSZFE763VmXXac/Sportswear-wetsuits-scuba-diving-products-of-super.png_350x350.png")"',               
+					]
                         
   SportsEquipmentImages = [
                         'url("https://di5cp8ixdolg4.cloudfront.net/images/products/30854b.jpg")',
@@ -158,6 +162,8 @@ small {
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Mens Full Sport Outfit<span class="price">$18</span><br /><small>Mens shirt and pants sports wear. Good quality in all sizes. (Updated Model 4.0) </small></p></div>',
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Womans Full Sport Outfit<span class="price">$20</span><br /><small>Womans shirt and pants sports wear. Good quality in all sizes.</small></p></div>',
                     '<div class="item" onclick=this.classList.toggle("show-description")><p>Womans Sports pants<span class="price">$6</span><br /><small>Womans pants sports wear. Good quality in all sizes.</small></p></div>',
+                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Mens Shirt<span class="price">$8</span><br /><small>Good quality, all purpose mens shirt.</small></p></div>',
+                    '<div class="item" onclick=this.classList.toggle("show-description")><p>Full Outfit for sport<span class="price">$26</span><br /><small>Made for men/woman and usually worn for scuba diving.</small></p></div>',
                       ]
   SportsEquipmentDivs = [ 
     
@@ -203,8 +209,10 @@ function SportsWear() {
 	    wear.innerHTML += SportsWearDivs[0]
     	wear.innerHTML += SportsWearDivs[1]
     	wear.innerHTML += SportsWearDivs[2]
+		wear.innerHTML += SportsWearDivs[3]
+		wear.innerHTML += SportsWearDivs[4]
 	items = document.getElementsByClassName("item")
-  for (i=0; i<3; i=i+1) {
+  for (i=0; i<5; i=i+1) {
 		items[i].style.background = SportsWearImages[i]
   	items[i].style.backgroundSize = '100% 100%'
   }
