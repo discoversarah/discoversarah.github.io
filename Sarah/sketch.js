@@ -145,7 +145,12 @@ if (touches.length == 0)   {
   }
  
 }
-      
+ else { 
+	x = touches[0].x
+	y = touches[0].y
+}
+
+	  
    if (score > 100 && level == 1) {
         s=[100, 200, 300, 400, 500]
         word = word + 20
