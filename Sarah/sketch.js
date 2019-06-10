@@ -128,7 +128,7 @@ function draw() {
     }
   }
    
-
+if (touches.length == 0)   {
 
   if (keyIsDown(RIGHT_ARROW) && x < 1355) {
     x = x + 8
@@ -144,7 +144,7 @@ function draw() {
     y = y + 8
   }
  
-
+}
       
    if (score > 100 && level == 1) {
         s=[100, 200, 300, 400, 500]
