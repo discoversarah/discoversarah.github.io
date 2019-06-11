@@ -220,8 +220,7 @@ if (touches.length == 0)   {
   text("Level: " + level, 5, 790)
 
 
-  gm.size(2*40, 2*40)
-  gm.position((40 - gm.width/2), 40 - gm.height/2)
+  
 
   fill(248, 187, 208) 
   circle(x,y,40)
