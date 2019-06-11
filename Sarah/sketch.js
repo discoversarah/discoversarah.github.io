@@ -19,7 +19,6 @@ let speedo
 let word
 let direction_h
 let direction_v 
-let gm
 let knob
 let y
 let s
@@ -65,7 +64,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);  
   direction_h = [1,1,1,1,1]
   direction_v = [1,1,1,1,1]
-  gm = createImg(“monster gif.gif”)
   speedo = 20
   level = 1
   score = 0
