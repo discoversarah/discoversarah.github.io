@@ -19,6 +19,7 @@ let speedo
 let word
 let direction_h
 let direction_v 
+let gm
 let knob
 let y
 let s
@@ -64,6 +65,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);  
   direction_h = [1,1,1,1,1]
   direction_v = [1,1,1,1,1]
+  gm = createImg(“monster gif.gif”)
   speedo = 20
   level = 1
   score = 0
@@ -218,6 +220,8 @@ if (touches.length == 0)   {
   text("Level: " + level, 5, 790)
 
 
+  gm.size(2*40, 2*40)
+  gm.position((40 - gm.width/2), 40 - gm.height/2)
 
   fill(248, 187, 208) 
   circle(x,y,40)
